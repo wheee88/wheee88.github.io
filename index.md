@@ -41,8 +41,6 @@ Here is a blockquote
 
 ## References
 
-다음은 Hwanhee Cho 박사의 주요 논문들을 IEEE 인용 형식(IEEE Citation Style)으로 정리한 내용입니다. 각 논문에 대해, 저자명(영문 표기 기준, 첫 번째 저자 성, 이름 이니셜 형식), 논문 제목, 발표 시기(월, 연도), 그리고 (가능한 경우) 학회나 저널명 등을 포함하였습니다. 연구게이트 페이지에서 제공하는 정보에 기반하며, 일부 세부 사항(예: 학술지명, 권/호, 페이지 등)은 해당 논문 본문이나 추가 자료를 통해 확인할 수 있습니다.
-
 ---
 
 *   J. Kim, H. Cho, H. Lee, and H. Jung, “A Study on the Virtual Operation of Energy Storage Devices using the Electric Railway System HILS Platform,” Oct. 2023.  
