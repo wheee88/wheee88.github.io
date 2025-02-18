@@ -3,19 +3,19 @@ layout: default
 is_contact: true
 ---
 
-* Email: [foo@xyz.com](mailto:foo@xyz.com)
+* Email: [hcho88@krri.re.kr](mailto:hcho88@krri.re.kr)
 
-* Phone: [+91-123123](tel:+91-123123)
+<!-- * Phone: [+82-10-9164-4427](tel:+82-10-9164-4427) -->
 
 ---
 
 ## Mailing Address
 
-> 221B, Baker Street
+> 176, Cheoldobangmulgwan-ro
 >
-> London
+> Uiwang-si, Gyeonggi-do
 >
-> United Kingdom
+> Republic of Korea
 
 ---
 
