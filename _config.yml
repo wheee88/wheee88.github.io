@@ -1,6 +1,6 @@
 title: Researcher
 url: "https://wheee88.github.io"
-baseurl: "/researcher"
+baseurl: "/"
 
 markdown: kramdown
 #ins_logo: "./bits-logo.png"
@@ -17,6 +17,6 @@ sass:
 
 nav:
  - name: "About"
-   link: "/researcher/"
+   link: "/"
  - name: "Contact"
    link: "contact"
