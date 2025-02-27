@@ -19,7 +19,6 @@ is_contact: true
 >
 > Republic of Korea
 
----
 <!-- 
 ## Social
 
