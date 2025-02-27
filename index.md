@@ -28,11 +28,11 @@ Korea University, Seoul, South Korea, (2014 ~ 2020)
 
 ## Publications
 
-** 2025
+2025
 ---
 * <span style="background-color:#fff5b1"> "Hybrid PI and Fuzzy Logic Control for Energy Optimization in Train Operations". </span> (Under Review)
 
-** 2024
+2024
 ---
 * <span style="background-color:#fff5b1"> **H. Cho, J. Kim, H. Lee, M. Song, "Simultaneous Computation of Traction Power Supply System using State-Space Nodal Grouping Method," Jan. 2024.** </span>
 
@@ -40,7 +40,7 @@ Korea University, Seoul, South Korea, (2014 ~ 2020)
 
 * M. Song, J. Kim, and H. Cho, "Three-Phase Diode-Clamped Four-Level PWM Inverter With Offset Voltage Injection", Jul. 2024
 
-** 2023
+2023
 ---
 * J. Kim, H. Cho, H. Lee, and H. Jung, “A Study on the Virtual Operation of Energy Storage Devices using the Electric Railway System HILS Platform,” Oct. 2023.  
 
