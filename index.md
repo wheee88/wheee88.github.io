@@ -6,16 +6,37 @@ layout: default
 
 <img class="profile-picture" src="CHH.jpg">
 
-Hi! I am a junior year student of B.E. Computer Science at Birla Institute of Technology and Science, Pilani.
+## Education
+   - B.S. in Electrical and Electronic Engineering
+Dankook University, Seoul, South Korea, 2014.
+   - Integrated M.S. and Ph.D. in Electrical and Electronic Engineering
+Korea University, Seoul, South Korea, 2020.
 
-This is a jekyll based resume template. You can find the full source code on [GitHub](https://github.com/wheee88)
+## Experience
+
+    Senior Researcher of Electric Railway Power Research Division, Korea Railroad Research Institute (KRRI), Uiwang-si, South Korea (since 2020)
 
 ## Research Interest
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus ipsum ac erat aliquam dapibus. Vestibulum vehicula placerat ex, a consectetur odio pharetra quis. Mauris id urna ante. Fusce pharetra diam ac nisi aliquet, vel egestas ex iaculis. Pellentesque laoreet cursus tellus sed pellentesque. Praesent a rhoncus elit. Nunc ipsum nisl, consequat sit amet pretium quis, gravida id ipsum.
+* **Power Systems** : Power System Oscillations, PMU, Power System Stability etc.
+* **Electric Railway Systems** : Energy Saving, ESS, etc.
+
+## Interested Skills
+
+* **Engineering Tools** : PSSE, PSCAD, MATLAB, Simulink, and OPAL-RT (eFPGASim, eMEGASim)
+* **Languages** : Python, C
 
 ## Publications
-2023
+
+** 2025
+---
+1. .  
+
+** 2024
+---
+1. .  
+
+** 2023
 ---
 1. J. Kim, H. Cho, H. Lee, and H. Jung, “A Study on the Virtual Operation of Energy Storage Devices using the Electric Railway System HILS Platform,” Oct. 2023.  
 
