@@ -6,15 +6,6 @@ layout: default
 
 <img class="profile-picture" src="CHH.jpg">
 
-<!-- 달력을 표시할 영역 -->
-<div id="github-calendar"></div>
-
-<!-- 달력 초기화 코드 -->
-<script>
-  // "wheee88" 부분을 본인 GitHub 아이디로 유지하면 됩니다.
-  new GitHubCalendar("#github-calendar", "wheee88");
-</script>
-
 ## Education
    - B.S. in Electrical and Electronic Engineering
 Dankook University, Seoul, South Korea, (2007 ~ 2014)
