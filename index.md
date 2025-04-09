@@ -19,12 +19,12 @@ Korea University, Seoul, South Korea, (2014 ~ 2020)
 ## Research Interest
 
 * **Power Systems** : Power System Oscillations, PMU, Power System Stability etc.
-* **Electric Railway Systems** : Energy Saving, ESS, etc.
+* **Electric Railway Systems** : Energy Saving, Hybrid ESS, MVDC, AC/DC Hybrid, Railway Compuation etc.
 
 ## Interested Skills
 
 * **Engineering Tools** : PSSE, PSCAD, MATLAB, Simulink, and OPAL-RT (eFPGASim, eMEGASim)
-* **Languages** : Python, C
+* **Languages** : C and Python
 
 ## Publications
 
