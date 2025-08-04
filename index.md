@@ -30,6 +30,8 @@ Korea University, Seoul, South Korea, (2014 ~ 2020)
 
 2025
 ---
+* B.Kim, J.Park, H.Cho, S.Nam, B.Lee, "An Enhanced Geometric Featured Extraction Method for Real-time Oscillation Detection in Power System" Aug. 2025**. </span>
+
 * <span style="background-color:#fff5b1"> **H. Cho, J. Kim, M. Song, C. Yun, G. Cho, Z. Tian, "Hybrid PI and Fuzzy Logic Control for Energy Optimization in Train Operations" Apr. 2025**. </span>
 
 2024
