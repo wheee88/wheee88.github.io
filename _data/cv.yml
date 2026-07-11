@@ -1,0 +1,29 @@
+# Data used by scripts/build_cv.py to assemble cv.pdf (edit freely).
+name: Hwanhee Cho
+title: Senior Researcher, Korea Railroad Research Institute (KRRI)
+email: hcho88@krri.re.kr
+orcid: 0000-0002-4966-0099
+website: https://wheee88.github.io
+github: https://github.com/wheee88
+
+summary: >-
+  Senior researcher in the Electric Railway Power Research Division at the
+  Korea Railroad Research Institute (KRRI). Research focuses on power system
+  stability and oscillation analysis, and on electric railway power supply
+  systems including energy-saving operation, hybrid energy storage, and MVDC.
+
+education:
+  - "B.S. in Electrical and Electronic Engineering, Dankook University, Yongin, South Korea (2007 – 2014)"
+  - "Integrated M.S. and Ph.D. in Electrical and Electronic Engineering, Korea University, Seoul, South Korea (2014 – 2020)"
+
+experience:
+  - "Secondment to the Korea Agency for Infrastructure Technology Advancement (KAIA), Anyang-si, South Korea (Feb. 23, 2026 – Feb. 22, 2027)"
+  - "Senior Researcher, Electric Railway Power Research Division, Korea Railroad Research Institute (KRRI), Uiwang-si, South Korea (since 2020)"
+
+interests:
+  - "Power Systems: Power System Oscillations, PMU, Power System Stability"
+  - "Electric Railway Systems: Energy Saving, Hybrid ESS, MVDC, AC/DC Hybrid, Railway Computation"
+
+skills:
+  - "Engineering tools: PSSE, PSCAD, MATLAB, Simulink, OPAL-RT (eFPGASim, eMEGASim)"
+  - "Programming: C, Python"

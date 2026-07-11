@@ -1,0 +1,8 @@
+{
+  "_schema": {
+    "date": "YYYY.MM",
+    "en": "Award name / organization (English)",
+    "ko": "수상명 / 수여기관 (한국어)"
+  },
+  "items": []
+}

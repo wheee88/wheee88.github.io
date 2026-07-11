@@ -1,0 +1,9 @@
+{
+  "_schema": {
+    "date": "YYYY.MM",
+    "en": "Talk title / venue (English)",
+    "ko": "발표 제목 / 행사명 (한국어)",
+    "link": "optional URL"
+  },
+  "items": []
+}

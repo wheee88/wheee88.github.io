@@ -5,7 +5,13 @@
 
   function applyLang(lang) {
     document.querySelectorAll('span[lang="en"], span[lang="ko"]').forEach(function (el) {
-      el.hidden = el.getAttribute('lang') !== lang;
+      var off = el.getAttribute('lang') !== lang;
+      el.hidden = off;
+      if (off) {
+        el.setAttribute('aria-hidden', 'true');
+      } else {
+        el.removeAttribute('aria-hidden');
+      }
     });
     html.setAttribute('lang', lang);
     html.classList.toggle('lang-ko', lang === 'ko');
@@ -13,6 +19,7 @@
       opt.classList.toggle('active', opt.getAttribute('data-lang') === lang);
     });
   }
+  window.applyLang = applyLang;
 
   var savedLang = 'en';
   try { savedLang = localStorage.getItem('lang') || 'en'; } catch (e) {}

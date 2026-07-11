@@ -9,6 +9,11 @@ title: Hwanhee Cho
 
 <span lang="en">I am a senior researcher in the Electric Railway Power Research Division at the Korea Railroad Research Institute (KRRI). My research focuses on power system stability and oscillation analysis, and on electric railway power supply systems including energy-saving operation, hybrid energy storage, and MVDC.</span><span lang="ko" hidden>한국철도기술연구원(KRRI) 전철전력연구실 선임연구원으로 재직하고 있습니다. 전력계통 안정도 및 진동 해석, 그리고 에너지 절감 운전·하이브리드 에너지저장장치(ESS)·MVDC 등 전기철도 급전 시스템을 연구하고 있습니다.</span>
 
+<div id="news-section" class="data-section" hidden markdown="0">
+<h2 id="news"><span lang="en">News</span><span lang="ko" hidden>소식</span></h2>
+<ul id="news-list" class="news-list"></ul>
+</div>
+
 ## <span lang="en">Education</span><span lang="ko" hidden>학력</span> {#education}
 
 - <span lang="en">B.S. in Electrical and Electronic Engineering, Dankook University, Yongin, South Korea (2007 – 2014)</span><span lang="ko" hidden>단국대학교 전자전기공학부 학사 (2007 – 2014)</span>
@@ -38,3 +43,23 @@ title: Hwanhee Cho
 </ul>
 
 <a class="all-pubs-link" href="{{ site.baseurl }}/publications"><span lang="en">Full publication list →</span><span lang="ko" hidden>전체 논문 목록 →</span></a>
+
+<div id="patents-section" class="data-section" hidden markdown="0">
+<h2 id="patents"><span lang="en">Patents</span><span lang="ko" hidden>특허</span></h2>
+<ul id="patents-list" class="pub-list"></ul>
+</div>
+
+<div id="projects-section" class="data-section" hidden markdown="0">
+<h2 id="projects"><span lang="en">Funded Projects</span><span lang="ko" hidden>연구과제</span></h2>
+<ul id="projects-list" class="pub-list"></ul>
+</div>
+
+<div id="talks-section" class="data-section" hidden markdown="0">
+<h2 id="talks"><span lang="en">Talks</span><span lang="ko" hidden>발표</span></h2>
+<ul id="talks-list" class="news-list"></ul>
+</div>
+
+<div id="awards-section" class="data-section" hidden markdown="0">
+<h2 id="awards"><span lang="en">Awards</span><span lang="ko" hidden>수상</span></h2>
+<ul id="awards-list" class="news-list"></ul>
+</div>

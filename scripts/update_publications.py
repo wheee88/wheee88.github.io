@@ -1,13 +1,18 @@
 #!/usr/bin/env python3
 """Append newly indexed publications to _data/publications.yml.
 
-Queries OpenAlex for works by Hwanhee Cho (KRRI) and appends any paper that is
-not already in the data file. Existing entries are never modified, so manual
-edits (titles, venues, months, highlight flags) are preserved. Entries are
-matched by DOI when available, otherwise by OpenAlex work id.
+Queries OpenAlex for works by Hwanhee Cho (KRRI), cross-checks the ORCID
+public record (0000-0002-4966-0099) for anything OpenAlex missed, and appends
+papers that are not already in the data file. Existing entries are never
+modified, so manual edits (titles, venues, months, highlight flags) are
+preserved. Entries are matched by DOI when available, otherwise by
+OpenAlex work id / ORCID put-code.
+
+Every newly added paper also prepends a line to data/news.json
+("YYYY.MM — Paper published in <venue>").
 
 Run manually:  python3 scripts/update_publications.py
-Run by CI:     .github/workflows/update-publications.yml (weekly)
+Run by CI:     .github/workflows/update-data.yml (weekly)
 
 If a new paper does not appear within a few weeks of publication it is usually
 because OpenAlex has not indexed it yet, or indexed it under a stray author
@@ -40,6 +45,8 @@ MONTHS = ["", "Jan.", "Feb.", "Mar.", "Apr.", "May", "Jun.",
           "Jul.", "Aug.", "Sep.", "Oct.", "Nov.", "Dec."]
 
 DATA_FILE = Path(__file__).resolve().parent.parent / "_data" / "publications.yml"
+NEWS_FILE = Path(__file__).resolve().parent.parent / "data" / "news.json"
+ORCID_ID = "0000-0002-4966-0099"
 
 HEADER = (
     "# Publication list rendered on the homepage (index.md).\n"
@@ -106,6 +113,88 @@ def to_entry(work):
     return entry
 
 
+def norm_title(t):
+    return re.sub(r"[^a-z0-9가-힣]", "", (t or "").lower())
+
+
+def fetch_orcid_missing(known, known_titles):
+    """Return entries from the ORCID public record whose DOI is unknown."""
+    req = urllib.request.Request(
+        f"https://pub.orcid.org/v3.0/{ORCID_ID}/works",
+        headers={"Accept": "application/json",
+                 "User-Agent": "wheee88.github.io publication updater"},
+    )
+    with urllib.request.urlopen(req, timeout=60) as resp:
+        groups = json.load(resp).get("group", [])
+
+    added = []
+    for g in groups:
+        summaries = g.get("work-summary") or []
+        if not summaries:
+            continue
+        s = summaries[0]
+        doi = ""
+        for eid in (g.get("external-ids") or {}).get("external-id", []):
+            if eid.get("external-id-type") == "doi":
+                doi = (eid.get("external-id-value") or "").lower()
+                break
+        put_code = f"orcid-{s.get('put-code')}"
+        if (doi and doi in known) or put_code in known:
+            continue
+        title = (((s.get("title") or {}).get("title") or {}).get("value") or "").strip()
+        if not title or norm_title(title) in known_titles:
+            continue
+        pdate = s.get("publication-date") or {}
+        year = int(((pdate.get("year") or {}).get("value")) or 0)
+        month = int(((pdate.get("month") or {}).get("value")) or 0)
+        if not year:
+            continue
+        entry = {
+            "openalex": put_code,  # dedup key for ORCID-only works
+            "title": title,
+            "authors": "",  # ORCID summaries carry no author list; fill by hand
+            "venue": ((s.get("journal-title") or {}).get("value") or ""),
+            "year": year,
+            "month": month,
+            "date_label": (MONTHS[month] + " " if month else "") + str(year),
+            "highlight": False,
+        }
+        if doi:
+            entry["doi"] = doi
+            entry["url"] = "https://doi.org/" + doi
+        added.append(entry)
+        known.add(put_code)
+        known_titles.add(norm_title(title))
+        if doi:
+            known.add(doi)
+    return added
+
+
+def push_news(new_entries):
+    """Prepend one news line per newly added paper to data/news.json."""
+    if not new_entries:
+        return
+    try:
+        news = json.loads(NEWS_FILE.read_text(encoding="utf-8"))
+    except (FileNotFoundError, ValueError):
+        news = {"items": []}
+    items = news.get("items", [])
+    for e in sorted(new_entries, key=lambda x: (x.get("year", 0), x.get("month", 0))):
+        venue = e.get("venue") or "a journal"
+        date = f"{e['year']}.{e['month']:02d}" if e.get("month") else str(e["year"])
+        items.insert(0, {
+            "date": date,
+            "en": f"Paper published in {venue}.",
+            "ko": f"{venue}에 논문이 게재되었습니다.",
+            "title": e.get("title", ""),
+        })
+    news["items"] = items[:30]
+    NEWS_FILE.parent.mkdir(exist_ok=True)
+    NEWS_FILE.write_text(json.dumps(news, ensure_ascii=False, indent=2) + "\n",
+                         encoding="utf-8")
+    print(f"Added {len(new_entries)} news item(s).")
+
+
 def main():
     existing = yaml.safe_load(DATA_FILE.read_text()) or []
     known = set()
@@ -131,6 +220,14 @@ def main():
         if doi:
             known.add(doi)
 
+    # Backstop: ORCID public record for anything OpenAlex has not indexed yet
+    known_titles = {norm_title(e.get("title")) for e in existing}
+    known_titles.update(norm_title(e.get("title")) for e in added)
+    try:
+        added.extend(fetch_orcid_missing(known, known_titles))
+    except Exception as e:
+        print(f"ORCID cross-check failed (non-fatal, OpenAlex result kept): {e!r}")
+
     if not added:
         print("No new publications found.")
         return
@@ -144,6 +241,8 @@ def main():
     print(f"Added {len(added)} new publication(s):")
     for e in added:
         print(f"  - [{e['date_label']}] {e['title']}")
+
+    push_news(added)
 
 
 if __name__ == "__main__":
