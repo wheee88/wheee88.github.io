@@ -1,0 +1,283 @@
+# Publication list rendered on the homepage (index.md).
+# Updated automatically by scripts/update_publications.py (weekly GitHub Action),
+# which appends newly indexed papers from OpenAlex (matched by ORCID profile).
+# Existing entries are matched by DOI / openalex id, so manual edits here
+# (titles, venues, months, highlight flags) are preserved.
+- openalex: W7118209175
+  title: RMS-Based PLL Stability Limit Estimation Using Maximum Phase Error for Power System Planning in Weak Grids
+  authors: B. Kim, J. Park, S. Oh, H. Cho, B. Lee
+  venue: Energies
+  year: 2026
+  month: 1
+  date_label: Jan. 2026
+  highlight: false
+  doi: 10.3390/en19010281
+  url: https://doi.org/10.3390/en19010281
+- openalex: W4417444903
+  title: Development of a TCP/IP-Based Hardware-in-the-Loop Simulation Platform for Virtual Train Operation and Energy Storage System Integration
+  authors: H. Cho, J. Kim, H. Lee, H. Jung
+  venue: The Transactions of the Korean Institute of Electrical Engineers
+  year: 2025
+  month: 12
+  date_label: Dec. 2025
+  highlight: true
+  doi: 10.5370/kiee.2025.74.12.2330
+  url: https://doi.org/10.5370/kiee.2025.74.12.2330
+- openalex: W4413104897
+  title: An Enhanced Geometric Featured Extraction Method for Real-Time Oscillation Detection in Power System
+  authors: B. Kim, J. Park, H. Cho, S. Nam, B. Lee
+  venue: IEEE Access
+  year: 2025
+  month: 8
+  date_label: Aug. 2025
+  highlight: false
+  doi: 10.1109/access.2025.3597375
+  url: https://doi.org/10.1109/access.2025.3597375
+- openalex: W4412502869
+  title: Universal MNRV DPWM Methodology for Effective Voltage Balancing in Diode-Clamped Multilevel Topologies
+  authors: M. Song, J. Kim, H. Cho, H. Kim, H. Jung
+  venue: The Transactions of the Korean Institute of Electrical Engineers
+  year: 2025
+  month: 7
+  date_label: Jul. 2025
+  highlight: false
+  doi: 10.5370/kiee.2025.74.7.1266
+  url: https://doi.org/10.5370/kiee.2025.74.7.1266
+- openalex: W4408971006
+  title: Hybrid PI and Fuzzy Logic Control for Energy Optimization in Train Operations
+  authors: H. Cho, J. Kim, M. Song, C. Yun, G. Cho, Z. Tian
+  venue: IEEE Access
+  year: 2025
+  month: 4
+  date_label: Apr. 2025
+  highlight: true
+  doi: 10.1109/access.2025.3555592
+  url: https://doi.org/10.1109/access.2025.3555592
+- openalex: W4404776447
+  title: Research on DC Railway Vehicle for Voltage Stabilization of Electric Railway Substations Using Operation Data-Based Control Strategy
+  authors: H. Cho, J. Kim, H. Lee, M. Song
+  venue: The Transactions of the Korean Institute of Electrical Engineers
+  year: 2024
+  month: 10
+  date_label: Oct. 2024
+  highlight: true
+  doi: 10.5370/kiee.2024.73.10.1779
+  url: https://doi.org/10.5370/kiee.2024.73.10.1779
+- openalex: W4400409767
+  title: Three-Phase Diode-Clamped Four-Level PWM Inverter With Offset Voltage Injection
+  authors: M. Song, J. Kim, H. Cho
+  venue: IEEE Access
+  year: 2024
+  month: 7
+  date_label: Jul. 2024
+  highlight: false
+  doi: 10.1109/access.2024.3424413
+  url: https://doi.org/10.1109/access.2024.3424413
+- openalex: W4391107543
+  title: Simultaneous Computation of Traction Power Supply System Using State-Space Nodal Grouping Method
+  authors: H. Cho, J. Kim, H. Lee, M. Song
+  venue: Journal of Electrical Engineering & Technology
+  year: 2024
+  month: 1
+  date_label: Jan. 2024
+  highlight: true
+  doi: 10.1007/s42835-023-01716-4
+  url: https://doi.org/10.1007/s42835-023-01716-4
+- openalex: W4388647543
+  title: A Study on the Virtual Operation of Energy Storage Devices using the Electric Railway System HILS Platform
+  authors: J. Kim, H. Cho, H. Lee, M. Song, J. Park, H. Jung
+  venue: The Transactions of the Korean Institute of Electrical Engineers
+  year: 2023
+  month: 10
+  date_label: Oct. 2023
+  highlight: false
+  doi: 10.5370/kiee.2023.72.10.1291
+  url: https://doi.org/10.5370/kiee.2023.72.10.1291
+- openalex: W4311106457
+  title: Mitigating Subsynchronous Torsional Interaction Using Geometric Feature Extraction Method
+  authors: H. Noh, H. Cho, S. Choi, B. Lee
+  venue: Sustainability
+  year: 2022
+  month: 12
+  date_label: Dec. 2022
+  highlight: false
+  doi: 10.3390/su142316110
+  url: https://doi.org/10.3390/su142316110
+- openalex: W4306963233
+  title: Reliability Demonstration of Auxiliary Power Unit in Railway Vehicles using the Virtual Operation Simulator
+  authors: J. Kim, H. Cho, H. Jung, H. Kim
+  venue: The Transactions of the Korean Institute of Electrical Engineers
+  year: 2022
+  month: 10
+  date_label: Oct. 2022
+  highlight: false
+  doi: 10.5370/kiee.2022.71.10.1460
+  url: https://doi.org/10.5370/kiee.2022.71.10.1460
+- openalex: W4306963304
+  title: A Study on Optimal Operation Strategy of Hydrogen Charging Facilities at Hydrogen Fuel Cell Train Depots
+  authors: J. Kim, J. Ryu, H. Cho, Y. Oh, H. Lee
+  venue: The Transactions of the Korean Institute of Electrical Engineers
+  year: 2022
+  month: 10
+  date_label: Oct. 2022
+  highlight: false
+  doi: 10.5370/kiee.2022.71.10.1467
+  url: https://doi.org/10.5370/kiee.2022.71.10.1467
+- openalex: W4296754164
+  title: Pulse-Amplitude-Modulation Full-Bridge Diode-Clamped Three-Level LLC Resonant Converter With Offset Voltage Injection Method
+  authors: M. Song, H. Jung, H. Kim, J. Kim, G. Cho, H. Cho
+  venue: The Transactions of the Korean Institute of Electrical Engineers
+  year: 2022
+  month: 9
+  date_label: Sep. 2022
+  highlight: false
+  doi: 10.5370/kiee.2022.71.9.1342
+  url: https://doi.org/10.5370/kiee.2022.71.9.1342
+- openalex: W4284974507
+  title: Simultaneous DC Railway Power System Analysis Method Using Model-Based TPS
+  authors: H. Cho, J. Kim, H. Jung, H. Kim
+  venue: Applied Sciences
+  year: 2022
+  month: 7
+  date_label: Jul. 2022
+  highlight: true
+  doi: 10.3390/app12146929
+  url: https://doi.org/10.3390/app12146929
+- openalex: W3207061482
+  title: Development and applicability test of fast charge/discharge system for DC 1500V railway vehicles
+  authors: J. Kim, H. Cho, J. Ryu, H. Kim
+  venue: The Transactions of the Korean Institute of Electrical Engineers
+  year: 2021
+  month: 10
+  date_label: Oct. 2021
+  highlight: false
+  doi: 10.5370/kiee.2021.70.10.1559
+  url: https://doi.org/10.5370/kiee.2021.70.10.1559
+- openalex: W3205484401
+  title: Time-series based System Stability Estimation for Railroad Vehicle PMSM Using Real-time Simulator
+  authors: H. Cho, J. Kim, H. Kim
+  venue: The Transactions of the Korean Institute of Electrical Engineers
+  year: 2021
+  month: 10
+  date_label: Oct. 2021
+  highlight: true
+  doi: 10.5370/kiee.2021.70.10.1526
+  url: https://doi.org/10.5370/kiee.2021.70.10.1526
+- openalex: W3174926111
+  title: Extended Geometric Feature Extraction Process for Detecting Multiple Frequency Oscillations in KEPCO System
+  authors: H. Cho, N. Choi, S. Nam, B. Lee
+  venue: IEEE Access
+  year: 2021
+  month: 6
+  date_label: Jun. 2021
+  highlight: true
+  doi: 10.1109/access.2021.3090360
+  url: https://doi.org/10.1109/access.2021.3090360
+- openalex: W3014766475
+  title: STATCOM with SSR damping controller using geometric extraction on phase space reconstruction method
+  authors: H. Noh, H. Cho, S. Lee, B. Lee
+  venue: International Journal of Electrical Power & Energy Systems
+  year: 2020
+  month: 9
+  date_label: Sep. 2020
+  highlight: false
+  doi: 10.1016/j.ijepes.2020.106017
+  url: https://doi.org/10.1016/j.ijepes.2020.106017
+- openalex: W3020693730
+  title: Evaluating Influence of Inverter-based Resources on System Strength Considering Inverter Interaction Level
+  authors: D. Kim, H. Cho, B. Park, B. Lee
+  venue: Sustainability
+  year: 2020
+  month: 4
+  date_label: Apr. 2020
+  highlight: false
+  doi: 10.3390/su12083469
+  url: https://doi.org/10.3390/su12083469
+- openalex: W3007207597
+  title: 'Enhancement of linearity and constancy of PMU-based voltage stability index: application to a Korean wide-area monitoring system'
+  authors: J. Jung, H. Cho, B. Park, S. Nam, K. Hur, B. Lee
+  venue: IET Generation, Transmission & Distribution
+  year: 2020
+  month: 2
+  date_label: Feb. 2020
+  highlight: false
+  doi: 10.1049/iet-gtd.2019.0773
+  url: https://doi.org/10.1049/iet-gtd.2019.0773
+- openalex: W3007947098
+  title: Oscillation Recognition Using a Geometric Feature Extraction Process Based on Periodic Time-Series Approximation
+  authors: H. Cho, N. Choi, B. Lee
+  venue: IEEE Access
+  year: 2020
+  month: 2
+  date_label: Feb. 2020
+  highlight: true
+  doi: 10.1109/access.2020.2974259
+  url: https://doi.org/10.1109/access.2020.2974259
+- openalex: W3094293546
+  title: 'Toward Mitigating Power System Oscillation : STATCOM Controller With Delay Reconstruction Algorithm'
+  authors: H. Noh, H. Cho, B. Lee, S. Lee
+  venue: 2019 IEEE 8th International Conference on Advanced Power System Automation and Protection (APAP)
+  year: 2019
+  month: 10
+  date_label: Oct. 2019
+  highlight: false
+  doi: 10.1109/apap47170.2019.9225023
+  url: https://doi.org/10.1109/apap47170.2019.9225023
+- openalex: W2946337226
+  title: Development of Floquet Multiplier Estimator to Determine Nonlinear Oscillatory Behavior in Power System Data Measurement
+  authors: N. Choi, H. Cho, B. Lee
+  venue: Energies
+  year: 2019
+  month: 5
+  date_label: May 2019
+  highlight: false
+  doi: 10.3390/en12101824
+  url: https://doi.org/10.3390/en12101824
+- openalex: W2916624469
+  title: Impact of Momentary Cessation Voltage Level in Inverter-Based Resources on Increasing the Short Circuit Current
+  authors: N. Choi, B. Park, H. Cho, B. Lee
+  venue: Sustainability
+  year: 2019
+  month: 2
+  date_label: Feb. 2019
+  highlight: false
+  doi: 10.3390/su11041153
+  url: https://doi.org/10.3390/su11041153
+- openalex: W2900605764
+  title: Transient Impact Analysis of High Renewable Energy Sources Penetration According to the Future Korean Power Grid Scenario
+  authors: S. Oh, H. Shin, H. Cho, B. Lee
+  venue: Sustainability
+  year: 2018
+  month: 11
+  date_label: Nov. 2018
+  highlight: false
+  doi: 10.3390/su10114140
+  url: https://doi.org/10.3390/su10114140
+- openalex: W2886453226
+  title: Non-linear dynamics based sub-synchronous resonance index by using power system measurement data
+  authors: H. Cho, S. Oh, S. Nam, B. Lee
+  venue: IET Generation, Transmission & Distribution
+  year: 2018
+  month: 8
+  date_label: Aug. 2018
+  highlight: true
+  doi: 10.1049/iet-gtd.2018.5414
+  url: https://doi.org/10.1049/iet-gtd.2018.5414
+- openalex: W2182569507
+  title: Empirical approach to regulate bus voltage range in power systems
+  authors: J. Jeong, M. Bae, H. Cho, B. Lee, H. Shim, J. Lee
+  venue: Journal of International Council on Electrical Engineering
+  year: 2015
+  month: 1
+  date_label: Jan. 2015
+  highlight: false
+  doi: 10.1080/22348972.2015.1110884
+  url: https://doi.org/10.1080/22348972.2015.1110884
+- openalex: W3015704227
+  title: Reactive power compensation using OPF for various load conditions
+  authors: H. Cho, M. Bae, J. Jeong, B. Lee
+  venue: Proceedings of the KIEE Conference
+  year: 2015
+  month: 0
+  date_label: '2015'
+  highlight: true

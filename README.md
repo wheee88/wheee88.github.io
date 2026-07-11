@@ -1,60 +1,23 @@
-# Researcher
+# wheee88.github.io
 
-### [Demo Website](http://ankitsultana.com/researcher)
+Personal academic homepage of **Hwanhee Cho** (Senior Researcher, Korea Railroad Research Institute), served by GitHub Pages at [wheee88.github.io](https://wheee88.github.io).
 
-A clean, single column, monospace resume template built for jekyll
+Based on the [researcher](https://github.com/ankitsultana/researcher) Jekyll template ([GNU GPL v3](LICENSE)).
 
-### Installation
+## Structure
 
-Simply fork the repository and edit away.
+* `index.md` — main page (about, education, research interests, publications)
+* `contact.md` — contact page
+* `_data/publications.yml` — publication list rendered on the main page
+* `_config.yml` — site title, description, navigation, social metadata
 
-#### Installation via remote themes
+## Automatic publication updates
 
-* Just setting `remote_theme: ankitsultana/researcher@gem` in `_config.yml` should work. Although in that case, I am not sure how
-you would build your site locally for testing. If you know how, open up an issue and let me know.
-* For more info, [refer this](https://blog.github.com/2017-11-29-use-any-theme-with-github-pages/).
+The publication list updates itself:
 
-### Customization
+* `scripts/update_publications.py` queries [OpenAlex](https://openalex.org) for new papers on the author's profile (ORCID [0000-0002-4966-0099](https://orcid.org/0000-0002-4966-0099)) and appends anything not already in `_data/publications.yml`.
+* `.github/workflows/update-publications.yml` runs the script every Monday morning (KST) and commits the result, which triggers a GitHub Pages rebuild. It can also be run on demand from the Actions tab ("Run workflow").
+* Existing entries are matched by DOI / OpenAlex id and never overwritten, so manual edits (venue names, months, highlighting) are safe.
+* First-author papers are highlighted automatically.
 
-* You can edit the `.md` (markdown) files as you see fit. You can also add some other markdown file, say `foo.md` in the root directory of the repository. It will then be accessible like so `{{ url of your website }}/foo`.
-
-* You can of course remove `contact.md` if you don't want it
-
-* To set the heading, edit the `title` variable in `_config.yml`
-
-* To edit the `links` mentioned on the navigation bar, you can edit `_config.yml`. For example:
-
-```
-nav:
- - name: "About"
-   link: "/researcher/"
- - name: "Resume"
-   link: "resume.pdf"
- - name: "Contact"
-   link: "contact"
-```
-
-* You can change the accent (color of hyperlinks) by editing the `accent` variable in `_sass/vars.scss`
-
-* You can setup google analytics, by setting `tracking_id` in `_config.yml`
-
-* To add a profile picture, make sure to give the image tag the class `profile-picture`. In other words,do it like so:
-
-```html
-<img class="profile-picture" src="sherlock.jpg">
-```
-
-* You can remove/customize the footer as you like by setting the
-appropriate variables in `_config.yml`
-
-* (New in v1.2.0) You can add institute logo at the top, by setting `ins_logo` in `_config.yml`. If you want
-to adjust the logo's size, try setting `max-height` in `#ins-logo` in file `./_sass/_style.scss` to the desired
-value
-
-![Institute Logo Image Sample](https://github.com/ankitsultana/assets/raw/master/ins-logo-sample.png)
-
-**Note:** Customizing the accent color might cause merge conflicts if you later try to merge from `bk2dcradle/researcher` to fetch updates/patches etc. (applicable only if you have forked).
-
-### License
-
-[GNU GPL v3](https://github.com/bk2dcradle/researcher/blob/gh-pages/LICENSE)
+If a new paper has not appeared after a few weeks (e.g. domestic conference papers that OpenAlex indexes slowly or not at all), add it to `_data/publications.yml` by hand following the existing format.

@@ -1,27 +1,25 @@
 ---
 layout: default
+title: Contact
 is_contact: true
 ---
 
 * Email: [hcho88@krri.re.kr](mailto:hcho88@krri.re.kr)
 
-* Github: [wheee88](https://github.com/wheee88)
+* ORCID: [0000-0002-4966-0099](https://orcid.org/0000-0002-4966-0099)
 
-<!-- * Phone: [+82-10-9164-4427](tel:+82-10-9164-4427) -->
+* ResearchGate: [Hwanhee Cho](https://www.researchgate.net/profile/Hwanhee-Cho)
+
+* Github: [wheee88](https://github.com/wheee88)
 
 ---
 
 ## Mailing Address
 
+> Korea Railroad Research Institute
+>
 > 176, Cheoldobangmulgwan-ro
 >
 > Uiwang-si, Gyeonggi-do
 >
 > Republic of Korea
-
-<!-- 
-## Social
-
-1. [Facebook](#)
-2. [Twitter](#)
-3. [Google+](#) -->
