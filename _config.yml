@@ -27,6 +27,8 @@ exclude:
 
 nav:
  - name: "About"
+   name_ko: "소개"
    link: "/"
  - name: "Contact"
+   name_ko: "연락처"
    link: "/contact"

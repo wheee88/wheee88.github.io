@@ -4,6 +4,14 @@
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
     <meta charset="utf-8">
+    <script>
+      (function () {
+        var lang = 'en';
+        try { lang = localStorage.getItem('lang') || 'en'; } catch (e) {}
+        if (lang === 'ko') { document.documentElement.classList.add('lang-ko'); }
+        document.documentElement.setAttribute('lang', lang);
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="power systems, electric railway, researcher, {{ site.author }}, {{ site.title }}">
     <meta name="author" content="{{ site.author }}">
@@ -48,16 +56,16 @@
             <a id="author-name" class="alignable pull-left" href="{{ site.url }}{{ site.baseurl }}">{{ site.title }}</a>
             <ul id="navlist" class="alignable pull-right navbar-ul">
                 {% for x in site.nav %}
+                    {% capture nav_label %}{% if x.name_ko %}<span class="en">{{ x.name }}</span><span class="ko">{{ x.name_ko }}</span>{% else %}{{ x.name }}{% endif %}{% endcapture %}
                     {% if x.name == "CV" %}
-                        <li class="alignable pull-left nav-list"><a target="_blank" href="{{ x.link }}">{{ x.name }}</a>
+                        <li class="alignable pull-left nav-list"><a target="_blank" href="{{ x.link }}">{{ nav_label }}</a>
                     {% else %}
-                        <li class="alignable pull-left nav-list"><a href="{{ x.link }}">{{ x.name }}</a>
+                        <li class="alignable pull-left nav-list"><a href="{{ x.link }}">{{ nav_label }}</a>
                     {% endif %}
-                    {% if forloop.last == false %}
                         /
-                    {% endif %}
                         </li>
                 {% endfor %}
+                <li class="alignable pull-left nav-list"><a href="#" id="lang-toggle" title="한국어 / English"><span class="en">한국어</span><span class="ko">English</span></a></li>
             </ul>
         </div>
         <div style="clear:both"></div>
@@ -76,5 +84,13 @@
                 {% endif %}
             </div>
     </div>
+    <script>
+      document.getElementById('lang-toggle').addEventListener('click', function (e) {
+        e.preventDefault();
+        var ko = document.documentElement.classList.toggle('lang-ko');
+        document.documentElement.setAttribute('lang', ko ? 'ko' : 'en');
+        try { localStorage.setItem('lang', ko ? 'ko' : 'en'); } catch (err) {}
+      });
+    </script>
 </body>
 </html>
