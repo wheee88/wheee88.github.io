@@ -1,9 +1,27 @@
 @import "vars";
 
 .content {
+    padding-bottom: 20px;
+
     a:hover {
         text-decoration: underline;
     }
+
+    /* Heading hierarchy */
+    h2 {
+        font-size: 1.45em;
+        margin: 2.2em 0 0.7em 0;
+        padding-bottom: 0.25em;
+        border-bottom: 1px solid var(--border);
+    }
+    h2:first-child {
+        margin-top: 1em;
+    }
+    h3 {
+        font-size: 1.12em;
+        margin: 1.6em 0 0.5em 0;
+    }
+
     ol {
         counter-reset: list;
     }
@@ -18,7 +36,7 @@
         margin: 5px 0 5px 0;
     }
     ul {
-        padding: 0 20px 0 20px;;
+        padding: 0 20px 0 20px;
     }
     ol {
         padding: 0 30px 0 30px;
@@ -30,15 +48,81 @@
         left: -30px;
     }
     blockquote {
-        //border: 1px solid black;
-        border-left: 5px solid #333333;
+        border-left: 5px solid var(--border);
         margin: 20px 0 20px 0;
         padding: 2px 8px 2px 8px;
         font-style: italic;
     }
     .pub-highlight {
-        background-color: #fff5b1;
+        background-color: var(--highlight-bg);
     }
+
+    /* Publication cards */
+    ul.pub-list {
+        list-style: none;
+        padding: 0;
+        margin: 0.8em 0;
+    }
+    ul.pub-list > li.pub-item {
+        border: 1px solid var(--border);
+        background: var(--card-bg);
+        border-radius: 8px;
+        padding: 12px 16px;
+        margin: 10px 0;
+    }
+    li.pub-item.first-author {
+        border-left: 4px solid var(--accent);
+    }
+    .pub-badge {
+        display: inline-block;
+        font-size: 0.72em;
+        font-weight: 600;
+        color: #fff;
+        background: var(--accent);
+        border-radius: 10px;
+        padding: 1px 8px;
+        margin-left: 6px;
+        vertical-align: 1px;
+        white-space: nowrap;
+    }
+    .pub-links {
+        display: block;
+        margin-top: 7px;
+        font-size: 0.85em;
+    }
+    .pub-links a {
+        margin-right: 10px;
+    }
+    .bibtex-btn {
+        font: inherit;
+        font-size: 1em;
+        color: var(--accent);
+        background: none;
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        padding: 0 8px;
+        cursor: pointer;
+    }
+    .bibtex-btn:hover {
+        border-color: var(--accent);
+    }
+
+    /* Collapsible year groups */
+    details.pub-year {
+        margin: 12px 0;
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 8px;
+    }
+    details.pub-year > summary {
+        cursor: pointer;
+        font-size: 1.12em;
+        font-weight: 700;
+        padding: 6px 0;
+    }
+    details.pub-year > summary:hover {
+        color: var(--accent);
+    }
+
     .profile-picture {
         height: $image-size;
         width: $image-size;
@@ -58,6 +142,6 @@
     }
     img {
         text-align: center;
-        width: 100%;
+        max-width: 100%;
     }
 }

@@ -1,6 +1,56 @@
 @import "vars";
 
 /*
+ * Theme variables: light by default, dark via prefers-color-scheme
+ * (html.light / html.dark set by the manual toggle override the system)
+ */
+
+@mixin dark-vars {
+    --bg: #14161a;
+    --text: #e6e6e6;
+    --muted: #9aa0a6;
+    --border: #33363c;
+    --card-bg: #1c1f24;
+    --accent: #{$accent-dark};
+    --highlight-bg: #4d4200;
+    --shadow: rgba(0, 0, 0, 0.5);
+}
+
+html {
+    --bg: #ffffff;
+    --text: #24292f;
+    --muted: #6a737d;
+    --border: #e1e4e8;
+    --card-bg: #f8f9fa;
+    --accent: #{$accent};
+    --highlight-bg: #fff5b1;
+    --shadow: rgba(0, 0, 0, 0.08);
+    color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+    html:not(.light) {
+        @include dark-vars;
+    }
+}
+html.dark {
+    @include dark-vars;
+}
+
+/*
+ * Language toggle: inactive language elements carry the `hidden` attribute
+ * (set in markup for Korean, synced by js/main.js). The rules below only
+ * guard against a flash of the wrong language before the script runs.
+ */
+
+html.lang-ko span[lang="ko"][hidden] {
+    display: inline;
+}
+html.lang-ko span[lang="en"] {
+    display: none;
+}
+
+/*
  * Basic
  */
 
@@ -8,15 +58,22 @@ html {
     height: 100%;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 body {
     margin: 0;
-    font-family: "Inconsolata";
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, "Helvetica Neue", "Apple SD Gothic Neo", "Noto Sans KR",
+        "Malgun Gothic", sans-serif;
     height: 100%;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    transition: background 0.2s ease, color 0.2s ease;
 }
 a {
     text-decoration: none;
-    color: $accent;
+    color: var(--accent);
 }
 a:hover {
     text-decoration: underline;
@@ -24,26 +81,33 @@ a:hover {
 hr {
     border: 0;
     height: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid var(--border);
 }
 
 /*
- * Navbar
+ * Navbar (sticky)
  */
 
+.navbar-wrap {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+}
 #author-name {
-    font-size: 30px;
-    color: #272727;
+    font-size: 26px;
+    color: var(--text);
     display: inline-block;
+    font-weight: 700;
 }
 .navbar {
-    padding: 50px 0 50px 0;
+    padding: 14px 0;
 }
 .navbar-ul {
     display: inline-block;
     margin: 0;
-    padding: 5px 0 5px 0;
+    padding: 8px 0 5px 0;
     margin-left: 20px;
 }
 .nav-list {
@@ -62,18 +126,37 @@ hr {
     float: right;
 }
 
-/*
- * Language toggle (default English; html.lang-ko shows Korean)
- */
+/* Language / theme controls */
 
-.ko {
-    display: none;
+#lang-toggle {
+    color: var(--muted);
 }
-html.lang-ko .ko {
-    display: inline;
+#lang-toggle:hover {
+    text-decoration: none;
 }
-html.lang-ko .en {
-    display: none;
+#lang-toggle .lang-opt {
+    color: var(--muted);
+    cursor: pointer;
+    padding: 0 2px;
+}
+#lang-toggle .lang-opt.active {
+    color: var(--accent);
+    font-weight: 700;
+    text-decoration: underline;
+}
+#lang-toggle .lang-sep {
+    color: var(--border);
+    padding: 0 2px;
+}
+#theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    line-height: 1;
+    color: var(--text);
+    padding: 0 0 0 8px;
+    vertical-align: -1px;
 }
 
 /* Divs */
@@ -86,6 +169,12 @@ html.lang-ko .en {
     min-height: 100%;
 }
 
+/* Anchor targets clear the sticky navbar */
+
+.content h2[id] {
+    scroll-margin-top: 90px;
+}
+
 /* Institute Image */
 
 #ins-logo {
@@ -93,6 +182,35 @@ html.lang-ko .en {
 	display: block;
 	max-height: 100px;
 	text-align: center;
+}
+
+/* Back to top */
+
+#back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--card-bg);
+    color: var(--text);
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: 0 2px 8px var(--shadow);
+    z-index: 99;
+}
+#back-to-top:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* Footer */
+
+.footer-link {
+    color: var(--muted);
 }
 
 /* Mobile */
@@ -106,7 +224,7 @@ html.lang-ko .en {
 
 @media (max-width: 650px) {
     .container {
-        max-width: 83%;
+        max-width: 90%;
     }
     .navbar-ul {
         margin-top: 5px;
@@ -116,14 +234,15 @@ html.lang-ko .en {
 @media (max-width: 500px) {
 	.navbar {
 		text-align: center;
-		padding: 50px 0px 0px 0px;
+		padding: 10px 0;
 	}
 	#author-name {
 		width: 100%;
 		float: none;
+		font-size: 22px;
 	}
 	#navlist {
-		padding: 10px 0 10px 0;
+		padding: 6px 0;
 		margin: 0;
 		display: block;
 		float: none;
@@ -137,7 +256,7 @@ html.lang-ko .en {
 		float: none;
 	}
 	#navlist li.nav-list {
-		margin: 0;
+		margin: 0 3px;
 	}
 }
 

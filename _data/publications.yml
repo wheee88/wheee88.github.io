@@ -3,6 +3,7 @@
 # which appends newly indexed papers from OpenAlex (matched by ORCID profile).
 # Existing entries are matched by DOI / openalex id, so manual edits here
 # (titles, venues, months, highlight flags) are preserved.
+# 'selected: true' marks papers shown in Selected Publications on the home page.
 - openalex: W7118209175
   title: RMS-Based PLL Stability Limit Estimation Using Maximum Phase Error for Power System Planning in Weak Grids
   authors: B. Kim, J. Park, S. Oh, H. Cho, B. Lee
@@ -23,6 +24,7 @@
   highlight: true
   doi: 10.5370/kiee.2025.74.12.2330
   url: https://doi.org/10.5370/kiee.2025.74.12.2330
+  selected: true
 - openalex: W4413104897
   title: An Enhanced Geometric Featured Extraction Method for Real-Time Oscillation Detection in Power System
   authors: B. Kim, J. Park, H. Cho, S. Nam, B. Lee
@@ -53,6 +55,7 @@
   highlight: true
   doi: 10.1109/access.2025.3555592
   url: https://doi.org/10.1109/access.2025.3555592
+  selected: true
 - openalex: W4404776447
   title: Research on DC Railway Vehicle for Voltage Stabilization of Electric Railway Substations Using Operation Data-Based Control Strategy
   authors: H. Cho, J. Kim, H. Lee, M. Song
@@ -63,6 +66,7 @@
   highlight: true
   doi: 10.5370/kiee.2024.73.10.1779
   url: https://doi.org/10.5370/kiee.2024.73.10.1779
+  selected: true
 - openalex: W4400409767
   title: Three-Phase Diode-Clamped Four-Level PWM Inverter With Offset Voltage Injection
   authors: M. Song, J. Kim, H. Cho
@@ -83,6 +87,7 @@
   highlight: true
   doi: 10.1007/s42835-023-01716-4
   url: https://doi.org/10.1007/s42835-023-01716-4
+  selected: true
 - openalex: W4388647543
   title: A Study on the Virtual Operation of Energy Storage Devices using the Electric Railway System HILS Platform
   authors: J. Kim, H. Cho, H. Lee, M. Song, J. Park, H. Jung
@@ -143,6 +148,7 @@
   highlight: true
   doi: 10.3390/app12146929
   url: https://doi.org/10.3390/app12146929
+  selected: true
 - openalex: W3207061482
   title: Development and applicability test of fast charge/discharge system for DC 1500V railway vehicles
   authors: J. Kim, H. Cho, J. Ryu, H. Kim
@@ -173,6 +179,7 @@
   highlight: true
   doi: 10.1109/access.2021.3090360
   url: https://doi.org/10.1109/access.2021.3090360
+  selected: true
 - openalex: W3014766475
   title: STATCOM with SSR damping controller using geometric extraction on phase space reconstruction method
   authors: H. Noh, H. Cho, S. Lee, B. Lee

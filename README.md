@@ -6,9 +6,12 @@ Based on the [researcher](https://github.com/ankitsultana/researcher) Jekyll tem
 
 ## Structure
 
-* `index.md` — main page (about, education, research interests, publications)
+* `index.md` — main page (about, education, research interests, selected publications)
+* `publications.md` — full publication list, collapsible by year
 * `contact.md` — contact page
-* `_data/publications.yml` — publication list rendered on the main page
+* `_data/publications.yml` — publication data (`selected: true` marks papers shown on the main page)
+* `_includes/pub_item.html` — shared publication card markup
+* `js/main.js` — language toggle (EN/KO), dark mode toggle, back-to-top, BibTeX copy
 * `_config.yml` — site title, description, navigation, social metadata
 
 ## Automatic publication updates
