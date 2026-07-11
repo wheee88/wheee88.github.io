@@ -1,11 +1,14 @@
 title: Hwanhee Cho
+author: Hwanhee Cho
+description: "Hwanhee Cho - Senior Researcher at Korea Railroad Research Institute (KRRI). Research on power system stability, oscillation analysis, and electric railway power supply systems."
 url: "https://wheee88.github.io"
-baseurl: "/"
+baseurl: ""
 
 markdown: kramdown
-#ins_logo: "./bits-logo.png"
 
-tracking_id: #
+favicon: yes
+favicon_location: /favicon.ico
+og_image: "https://wheee88.github.io/CHH.jpg"
 
 footer: yes
 footer_url: "https://wheee88.github.io"
@@ -15,8 +18,15 @@ sass:
     style: compressed
     sass_dir: _sass
 
+exclude:
+    - scripts/
+    - README.md
+    - LICENSE
+    - Gemfile
+    - Gemfile.lock
+
 nav:
  - name: "About"
    link: "/"
  - name: "Contact"
-   link: "contact"
+   link: "/contact"
