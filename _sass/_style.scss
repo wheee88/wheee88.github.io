@@ -62,6 +62,20 @@ hr {
     float: right;
 }
 
+/*
+ * Language toggle (default English; html.lang-ko shows Korean)
+ */
+
+.ko {
+    display: none;
+}
+html.lang-ko .ko {
+    display: inline;
+}
+html.lang-ko .en {
+    display: none;
+}
+
 /* Divs */
 
 .container {

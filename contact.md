@@ -4,7 +4,7 @@ title: Contact
 is_contact: true
 ---
 
-* Email: [hcho88@krri.re.kr](mailto:hcho88@krri.re.kr)
+* <span class="en">Email</span><span class="ko">이메일</span>: [hcho88@krri.re.kr](mailto:hcho88@krri.re.kr)
 
 * ORCID: [0000-0002-4966-0099](https://orcid.org/0000-0002-4966-0099)
 
@@ -14,12 +14,12 @@ is_contact: true
 
 ---
 
-## Mailing Address
+## <span class="en">Mailing Address</span><span class="ko">주소</span>
 
-> Korea Railroad Research Institute
+> <span class="en">Korea Railroad Research Institute</span><span class="ko">한국철도기술연구원</span>
 >
-> 176, Cheoldobangmulgwan-ro
+> <span class="en">176, Cheoldobangmulgwan-ro</span><span class="ko">철도박물관로 176</span>
 >
-> Uiwang-si, Gyeonggi-do
+> <span class="en">Uiwang-si, Gyeonggi-do</span><span class="ko">경기도 의왕시</span>
 >
-> Republic of Korea
+> <span class="en">Republic of Korea</span><span class="ko">대한민국</span>
