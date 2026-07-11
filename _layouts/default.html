@@ -6,13 +6,17 @@
     <meta charset="utf-8">
     <script>
       (function () {
-        var lang = 'en';
-        try { lang = localStorage.getItem('lang') || 'en'; } catch (e) {}
-        if (lang === 'ko') { document.documentElement.classList.add('lang-ko'); }
-        document.documentElement.setAttribute('lang', lang);
+        try {
+          var l = localStorage.getItem('lang');
+          if (l === 'ko') { document.documentElement.classList.add('lang-ko'); }
+          document.documentElement.setAttribute('lang', l === 'ko' ? 'ko' : 'en');
+          var t = localStorage.getItem('theme');
+          if (t === 'dark' || t === 'light') { document.documentElement.classList.add(t); }
+        } catch (e) {}
       })();
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
     <meta name="keywords" content="power systems, electric railway, researcher, {{ site.author }}, {{ site.title }}">
     <meta name="author" content="{{ site.author }}">
     {% if page.url == "/404.html" %}
@@ -25,7 +29,7 @@
     {% endif %}
     {% assign url = site.url | append: site.baseurl | append: page.url %}
     <meta name="description" content="{{ desc }}">
-    <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css?v={{ site.time | date: '%s' }}">
     {% if site.favicon %}
         <link rel="icon" href="{{ site.favicon_location }}">
@@ -49,27 +53,27 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="navbar container">
-            {% if site.ins_logo %}
-                <img id="ins-logo" src="{{ site.ins_logo }}" />
-            {% endif %}
-            <a id="author-name" class="alignable pull-left" href="{{ site.url }}{{ site.baseurl }}">{{ site.title }}</a>
-            <ul id="navlist" class="alignable pull-right navbar-ul">
-                {% for x in site.nav %}
-                    {% capture nav_label %}{% if x.name_ko %}<span class="en">{{ x.name }}</span><span class="ko">{{ x.name_ko }}</span>{% else %}{{ x.name }}{% endif %}{% endcapture %}
-                    {% if x.name == "CV" %}
-                        <li class="alignable pull-left nav-list"><a target="_blank" href="{{ x.link }}">{{ nav_label }}</a>
-                    {% else %}
+        <div class="navbar-wrap">
+            <div class="navbar container">
+                {% if site.ins_logo %}
+                    <img id="ins-logo" src="{{ site.ins_logo }}" alt="Institute logo" />
+                {% endif %}
+                <a id="author-name" class="alignable pull-left" href="{{ site.url }}{{ site.baseurl }}">{{ site.title }}</a>
+                <ul id="navlist" class="alignable pull-right navbar-ul">
+                    {% for x in site.nav %}
+                        {% capture nav_label %}{% if x.name_ko %}<span lang="en">{{ x.name }}</span><span lang="ko" hidden>{{ x.name_ko }}</span>{% else %}{{ x.name }}{% endif %}{% endcapture %}
                         <li class="alignable pull-left nav-list"><a href="{{ x.link }}">{{ nav_label }}</a>
-                    {% endif %}
-                        /
+                            /
                         </li>
-                {% endfor %}
-                <li class="alignable pull-left nav-list"><a href="#" id="lang-toggle" title="한국어 / English"><span class="en">한국어</span><span class="ko">English</span></a></li>
-            </ul>
+                    {% endfor %}
+                    <li class="alignable pull-left nav-list">
+                        <a href="#" id="lang-toggle" aria-label="언어 전환 / Switch language"><span class="lang-opt" data-lang="en">EN</span><span class="lang-sep">|</span><span class="lang-opt" data-lang="ko">한국어</span></a>
+                        <button id="theme-toggle" type="button" aria-label="Toggle dark mode">🌙</button>
+                    </li>
+                </ul>
+            </div>
         </div>
         <div style="clear:both"></div>
-        <hr>
         {% if page.is_contact == true %}
             <div class="container content contact">
         {% else %}
@@ -79,18 +83,12 @@
                 {% if site.footer == true %}
                     <hr />
                     <p style="text-align: center; margin-bottom: 10px">
-                    <a href="{{ site.footer_url }}" style="color: black"><small>{{ site.footer_text }}</small></a>
+                    <a href="{{ site.footer_url }}" class="footer-link"><small>{{ site.footer_text }}</small></a>
                     </p>
                 {% endif %}
             </div>
     </div>
-    <script>
-      document.getElementById('lang-toggle').addEventListener('click', function (e) {
-        e.preventDefault();
-        var ko = document.documentElement.classList.toggle('lang-ko');
-        document.documentElement.setAttribute('lang', ko ? 'ko' : 'en');
-        try { localStorage.setItem('lang', ko ? 'ko' : 'en'); } catch (err) {}
-      });
-    </script>
+    <button id="back-to-top" type="button" aria-label="맨 위로 / Back to top" hidden>↑</button>
+    <script src="{{ site.baseurl }}/js/main.js?v={{ site.time | date: '%s' }}"></script>
 </body>
 </html>
