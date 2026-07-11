@@ -107,6 +107,29 @@
         border-color: var(--accent);
     }
 
+    /* News / talks / awards lists */
+    ul.news-list {
+        list-style: none;
+        padding: 0;
+        margin: 0.8em 0;
+    }
+    ul.news-list > li.news-item {
+        margin: 8px 0;
+        padding-left: 2px;
+    }
+    .news-date {
+        font-weight: 600;
+        color: var(--muted);
+        white-space: nowrap;
+    }
+    .news-title {
+        color: var(--muted);
+        font-size: 0.9em;
+    }
+    .data-section h2 {
+        scroll-margin-top: 90px;
+    }
+
     /* Collapsible year groups */
     details.pub-year {
         margin: 12px 0;

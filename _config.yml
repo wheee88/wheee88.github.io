@@ -35,6 +35,20 @@ nav:
  - name: "Publications"
    name_ko: "논문"
    link: "/publications"
+ - name: "News"
+   name_ko: "소식"
+   link: "/#news"
+   data_section: true
+ - name: "Patents"
+   name_ko: "특허"
+   link: "/#patents"
+   data_section: true
+ - name: "Projects"
+   name_ko: "과제"
+   link: "/#projects"
+   data_section: true
  - name: "Contact"
    name_ko: "연락처"
    link: "/contact"
+ - name: "CV"
+   link: "/cv.pdf"

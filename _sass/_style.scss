@@ -38,16 +38,25 @@ html.dark {
 }
 
 /*
+ * The `hidden` attribute must always win, even over author display rules
+ * (e.g. .alignable sets display on nav items that start hidden).
+ */
+
+[hidden] {
+    display: none !important;
+}
+
+/*
  * Language toggle: inactive language elements carry the `hidden` attribute
  * (set in markup for Korean, synced by js/main.js). The rules below only
  * guard against a flash of the wrong language before the script runs.
  */
 
 html.lang-ko span[lang="ko"][hidden] {
-    display: inline;
+    display: inline !important;
 }
 html.lang-ko span[lang="en"] {
-    display: none;
+    display: none !important;
 }
 
 /*
@@ -147,6 +156,25 @@ hr {
 #lang-toggle .lang-sep {
     color: var(--border);
     padding: 0 2px;
+}
+.id-link {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    margin-right: 6px;
+    vertical-align: 1px;
+}
+.id-link:hover {
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
 }
 #theme-toggle {
     background: none;
