@@ -60,7 +60,7 @@ GitHub 저장소 → **Settings → Secrets and variables → Actions → New re
 ### 수동 관리 데이터
 
 * `data/talks.json`, `data/awards.json` — 파일 안 `_schema` 형식대로 `items`에 추가하면 해당 섹션이 자동으로 나타납니다 (비어 있으면 섹션·메뉴 숨김)
-* `data/news.json` — 자동 생성 외에 손으로 항목을 추가해도 됩니다 (최근 5건 표시)
+* `data/news.json` — 자동 생성(논문) 외에 파견·수상·인사이동 같은 소식도 같은 형식(`date`/`en`/`ko`)으로 직접 추가하면 됩니다 (최근 5건 표시, 최신순 정렬 유지)
 
 ## CV PDF
 
