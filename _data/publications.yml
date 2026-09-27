@@ -3,7 +3,6 @@
 # which appends newly indexed papers from OpenAlex (matched by ORCID profile).
 # Existing entries are matched by DOI / openalex id, so manual edits here
 # (titles, venues, months, highlight flags) are preserved.
-# 'selected: true' marks papers shown in Selected Publications on the home page.
 - openalex: W7118209175
   title: RMS-Based PLL Stability Limit Estimation Using Maximum Phase Error for Power System Planning in Weak Grids
   authors: B. Kim, J. Park, S. Oh, H. Cho, B. Lee
@@ -288,3 +287,31 @@
   month: 0
   date_label: '2015'
   highlight: true
+- openalex: W3043308624
+  title: 'Magnetic fabric (anisotropy of magnetic susceptibility) constraints on emplacement mechanism of clastic dikes: an example from the Cretaceous Dadaepo Basin in SE Korea'
+  authors: M. Son, H. Cho, Y. Sohn
+  venue: AGUFM
+  year: 2014
+  month: 12
+  date_label: Dec. 2014
+  highlight: false
+- openalex: W2073813042
+  title: Magnetic field anisotropy based MR tractography
+  authors: S. Han, Y. Song, F. Cho, S. Ryu, G. Cho, Y. Song, H. Cho
+  venue: Journal of Magnetic Resonance
+  year: 2011
+  month: 8
+  date_label: Aug. 2011
+  highlight: false
+  doi: 10.1016/j.jmr.2011.07.021
+  url: https://doi.org/10.1016/j.jmr.2011.07.021
+- openalex: W2085144041
+  title: Study of 360° domain walls in NiFe/NiO film by tip–sample interaction on magnetic force microscope
+  authors: T. Zhao, C. Hou, H. Fujiwara, H. Cho, J. Harrell, A. Khapikov
+  venue: Journal of Applied Physics
+  year: 2000
+  month: 5
+  date_label: May 2000
+  highlight: false
+  doi: 10.1063/1.372745
+  url: https://doi.org/10.1063/1.372745
